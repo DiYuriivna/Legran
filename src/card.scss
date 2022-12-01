@@ -1,0 +1,91 @@
+.grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 35px;
+  justify-content: center;
+}
+h2 {
+  font-family: Fjalla One;
+  font-size: 200%;
+}
+p {
+  line-height: 1.5;
+}
+
+/*-------------------Newdishes-wrapper---------------------------*/
+.newdishes {
+  grid-column: 2/12;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10%;
+
+  &__title {
+    margin-bottom: 2%;
+  }
+  &__para {
+    margin-bottom: 10%;
+  }
+  &__1blockwrap {
+    width: min-content;
+  }
+}
+
+/*-------------------Card---------------------------*/
+
+.card {
+  &__price {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__img-wrap {
+    position: relative;
+    font-size: 0;
+  }
+  &__addbtn {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    z-index: 100;
+    width: 56px;
+    height: 52px;
+    border: none;
+    background-color: orange;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 52px;
+    &:active {
+      background-color: black;
+      color: white;
+    }
+    &:hover {
+      font-size: 45px;
+      //   font-weight: 400;
+    }
+  }
+  //   &__addbtn::before {
+  //     content: "";
+  //     height: 30px;
+  //     width: 2px;
+  //     background-color: black;
+  //     position: absolute;
+  //     z-index: 101;
+  //     top: 10;
+  //     display: inline-block;
+  //   }
+  //   &__addbtn:hover::before {
+  //     content: "";
+  //     height: 30px;
+  //     width: 2px;
+  //     background-color: rgb(255, 7, 7);
+  //     position: absolute;
+  //     z-index: 101;
+  //     top: 10;
+  //   }
+  &__caption-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
