@@ -1,0 +1,17 @@
+[33mcommit 2fcde9d90f7bba450fff292fd0d29a3b060d7be8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: my name <test.gmail.com>
+Date:   Fri Dec 2 10:45:07 2022 +0200
+
+    Add Newdishes.js
+
+[33mcommit 5de6ae0c6b1b8aa36ff39a988d17c9cbe22c7127[m[33m ([m[1;32mtesting[m[33m)[m
+Author: my name <test.gmail.com>
+Date:   Thu Dec 1 22:32:02 2022 +0200
+
+    Add Card.css to git
+
+[33mcommit 834875acde39609a3c2d360c0b10912ca23852bb[m
+Author: my name <test.gmail.com>
+Date:   Tue Nov 29 19:02:51 2022 +0200
+
+    Initialize project using Create React App

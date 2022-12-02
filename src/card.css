@@ -1,0 +1,80 @@
+.grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(40px, 84px));
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  justify-content: center;
+}
+
+h2 {
+  font-family: Fjalla One;
+  font-size: 200%;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/*-------------------Newdishes-wrapper---------------------------*/
+.newdishes {
+  grid-column: 2/-2;
+  -moz-columns: 2 560px;
+       columns: 2 560px;
+  gap: 35px;
+  margin-top: 10%;
+  -moz-column-fill: auto;
+       column-fill: auto;
+}
+.newdishes__title {
+  margin-bottom: 2%;
+}
+.newdishes__para {
+  margin-bottom: 10%;
+}
+
+/*-------------------Card---------------------------*/
+.card {
+  -moz-column-break-after: column;
+       break-after: column;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  display: inline-block;
+  margin-bottom: 4%;
+}
+.card__price {
+  font-size: 20px;
+  font-weight: bold;
+}
+.card__img-wrap {
+  position: relative;
+  font-size: 0;
+}
+.card__img {
+  max-width: 560px;
+}
+.card__addbtn {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  z-index: 100;
+  width: 56px;
+  height: 52px;
+  border: none;
+  background-color: orange;
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 52px;
+}
+.card__addbtn:active {
+  background-color: black;
+  color: white;
+}
+.card__addbtn:hover {
+  font-size: 45px;
+}
+.card__caption-wrap {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=card.css.map */

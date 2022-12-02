@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fjalla+One:regular&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div className="grid">
+      <header className="header">
+        <div className="header__bcg"></div>
+        <nav className="header__nav">
+          <div className="header__logo">Negroni</div>
+          <ul className="header__center-nav">
+            <li className="header__delivery-btn">Delivery</li>
+            <li className="header__menu-btn">Menu</li>
+            <li>
+              <form className="header__search-wrap" action="">
+                <button className="header__search-btn">
+                  <img src="../public/assets/search.svg" /></button
+                ><input
+                  className="header__search"
+                  placeholder="Search..."
+                  type="search"
+                />
+              </form>
+            </li>
+          </ul>
+          <ul className="header__right-nav">
+            <li>
+              <button className="header__person">
+                <img src="../public/assets/person.svg" />
+              </button>
+            </li>
+            <li>
+              <button className="header__cart">
+                <img src="../public/assets/cart.svg" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>

@@ -1,8 +1,8 @@
 .grid {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(40px, 84px));
   column-gap: 35px;
   justify-content: center;
 }
@@ -16,11 +16,11 @@ p {
 
 /*-------------------Newdishes-wrapper---------------------------*/
 .newdishes {
-  grid-column: 2/12;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  grid-column: 2/-2;
+  columns: 2 560px;
+  gap: 35px;
   margin-top: 10%;
+  column-fill: auto;
 
   &__title {
     margin-bottom: 2%;
@@ -28,21 +28,30 @@ p {
   &__para {
     margin-bottom: 10%;
   }
-  &__1blockwrap {
-    width: min-content;
-  }
+  // &__1blockwrap {
+  //   display: inline-block;
+  //   width: min-content;
+  // }
 }
 
 /*-------------------Card---------------------------*/
 
 .card {
+  break-after: column;
+  break-inside: avoid;
+  display: inline-block;
+  margin-bottom: 4%;
   &__price {
     font-size: 20px;
     font-weight: bold;
   }
+
   &__img-wrap {
     position: relative;
     font-size: 0;
+  }
+  &__img {
+    max-width: 560px;
   }
   &__addbtn {
     position: absolute;

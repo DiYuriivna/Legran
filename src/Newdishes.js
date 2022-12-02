@@ -8,11 +8,6 @@ function Newdishes() {
       caption: "Oven-Baked Watercress Bear",
       price: "34$",
     },
-    {
-      src: "/assets/2.png",
-      caption: "Oven-Baked Watercress Bear",
-      price: "34$",
-    },
   ];
   const infoNewDish1 = infoNewDish.slice(0, 1);
   const infoNewDish2 = infoNewDish.slice(1);
