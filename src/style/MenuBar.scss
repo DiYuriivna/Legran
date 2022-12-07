@@ -1,0 +1,32 @@
+@import "./extends";
+
+.menu {
+  margin-top: 40px;
+  @extend %grid;
+  &__wrap {
+    grid-column: 1 / -1;
+    //   height: min-content;
+    display: flex;
+  }
+
+  //   padding: 20px;
+  //   max-width: calc(1440px / 2);
+  &__img {
+    height: 55%;
+    margin-right: 20px;
+    // margin-top: 20%;
+  }
+  &__food,
+  &__drink {
+    width: 50%;
+    line-height: 100px;
+    height: 100px;
+    // display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 50px;
+    // font-family: Fjalla One;
+  }
+}

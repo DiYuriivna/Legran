@@ -1,0 +1,28 @@
+.coctail-section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(40px, 84px));
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  justify-content: center;
+}
+
+.coctail-section {
+  margin-top: 10%;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+  width: 100vw;
+  background-color: black;
+}
+.coctail-section h2 {
+  grid-column: 1/-1;
+  color: white;
+}
+.coctail-section__cards {
+  grid-column: 2/-2;
+  display: flex;
+  justify-content: space-between;
+}
+.coctail-section__cards .card {
+  color: white;
+}/*# sourceMappingURL=TopCoctails.css.map */

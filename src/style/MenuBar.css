@@ -1,0 +1,29 @@
+.menu {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(40px, 84px));
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  justify-content: center;
+}
+
+.menu {
+  margin-top: 40px;
+}
+.menu__wrap {
+  grid-column: 1/-1;
+  display: flex;
+}
+.menu__img {
+  height: 55%;
+  margin-right: 20px;
+}
+.menu__food, .menu__drink {
+  width: 50%;
+  line-height: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  font-size: 50px;
+}/*# sourceMappingURL=MenuBar.css.map */

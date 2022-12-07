@@ -1,0 +1,87 @@
+@import "./extends";
+
+h2 {
+  font-family: Fjalla One;
+  font-size: 200%;
+  margin-bottom: 2%;
+}
+p {
+  line-height: 1.5;
+}
+.grid {
+  @extend %grid;
+}
+/*-------------------Newdishes-wrapper---------------------------*/
+.newdishes {
+  grid-column: 2/-2;
+  columns: 2 560px;
+  gap: 35px;
+  margin-top: 10%;
+  column-fill: auto;
+
+  &__para {
+    margin-bottom: 10%;
+  }
+}
+
+/*-------------------Card---------------------------*/
+
+.card {
+  break-after: column;
+  break-inside: avoid;
+  margin-bottom: 3%;
+  // display: inline-block;
+
+  &__price {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__img-wrap {
+    position: relative;
+    font-size: 0;
+  }
+  &__img {
+    max-width: 560px;
+  }
+
+  /*------------------------------Add button----------------*/
+  &__addbtn {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    z-index: 100;
+    width: 35px;
+    height: 35px;
+    border: none;
+
+    background-color: orange;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 35px;
+    &_added {
+      background-color: rgb(0, 0, 0);
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 15px;
+      color: white;
+    }
+    &:hover .card__add-or-check_check {
+      font-size: 10px;
+    }
+    &:hover .card__add-or-check {
+      font-size: 30px;
+    }
+    &:active {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &__caption-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}

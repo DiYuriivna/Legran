@@ -1,0 +1,49 @@
+@import "./extends";
+
+.popular {
+  @extend %grid;
+  width: 100vw;
+  padding-top: 10%;
+
+  background-color: rgb(255, 240, 247);
+
+  p,
+  h2 {
+    grid-column: span 5/ -1;
+    text-align: end;
+  }
+  p {
+    margin-bottom: 10%;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+
+  &__p1 {
+    grid-column: 1 / span 3;
+  }
+  &__p2 {
+    position: relative;
+    top: -40%;
+    grid-column: 4 / span 3;
+  }
+  &__p3 {
+    grid-column: span 4/ -1;
+  }
+  &__p4 {
+    grid-column: 1 / span 4;
+  }
+  &__p5 {
+    position: relative;
+    top: -40%;
+    grid-column: 5 / span 3;
+  }
+  &__p7 {
+    position: relative;
+    top: -40%;
+    grid-column: span 3/ -4;
+  }
+  &__p6 {
+    grid-column: span 3/ -1;
+  }
+}

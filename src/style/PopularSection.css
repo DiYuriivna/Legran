@@ -1,0 +1,51 @@
+.popular {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(40px, 84px));
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  justify-content: center;
+}
+
+.popular {
+  width: 100vw;
+  padding-top: 10%;
+  background-color: rgb(255, 240, 247);
+}
+.popular p,
+.popular h2 {
+  grid-column: span 5/-1;
+  text-align: end;
+}
+.popular p {
+  margin-bottom: 10%;
+}
+.popular .card {
+  margin-bottom: 30px;
+}
+.popular__p1 {
+  grid-column: 1/span 3;
+}
+.popular__p2 {
+  position: relative;
+  top: -40%;
+  grid-column: 4/span 3;
+}
+.popular__p3 {
+  grid-column: span 4/-1;
+}
+.popular__p4 {
+  grid-column: 1/span 4;
+}
+.popular__p5 {
+  position: relative;
+  top: -40%;
+  grid-column: 5/span 3;
+}
+.popular__p7 {
+  position: relative;
+  top: -40%;
+  grid-column: span 3/-4;
+}
+.popular__p6 {
+  grid-column: span 3/-1;
+}/*# sourceMappingURL=PopularSection.css.map */

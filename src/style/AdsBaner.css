@@ -1,0 +1,91 @@
+.ads {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(40px, 84px));
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  justify-content: center;
+}
+
+.ads {
+  font-size: 0;
+  /*-------------------BUTTON--------------------------*/
+  /*-------------------::pseudo button--------------------------*/
+  /*----------------------center btn------------*/
+  /*-------------------BANER--------------------------*/
+  /*-------------------ARROW--------------------------*/
+}
+.ads__wrap {
+  grid-column: 1/-1;
+  position: relative;
+}
+.ads__left, .ads__right {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  width: 150px;
+  height: 150px;
+  top: 35%;
+}
+.ads__left {
+  left: 0px;
+}
+.ads__right {
+  right: 0px;
+}
+.ads__right:hover, .ads__left:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+.ads__right:active, .ads__left:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.ads__centerbtn {
+  position: absolute;
+  z-index: 1;
+  bottom: 40px;
+  left: 630px;
+}
+.ads__centerbtn-1, .ads__centerbtn-2, .ads__centerbtn-3 {
+  width: 60px;
+  height: 10px;
+  margin-right: 2px;
+  border: 1px solid black;
+  border-radius: 0%;
+}
+.ads__centerbtn-1:hover, .ads__centerbtn-2:hover, .ads__centerbtn-3:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.ads__centerbtn-1:active, .ads__centerbtn-2:active, .ads__centerbtn-3:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.ads__centerbtn-1_clicked, .ads__centerbtn-2_clicked, .ads__centerbtn-3_clicked {
+  background-color: #000000;
+  width: 50px;
+}
+.ads__centerbtn-1_clicked:hover, .ads__centerbtn-2_clicked:hover, .ads__centerbtn-3_clicked:hover {
+  background-color: #000000;
+}
+.ads__baner {
+  width: 100%;
+}
+.ads__left-arrow, .ads__right-arrow {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  border-right: none;
+  border-bottom: none;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+}
+.ads__left-arrow {
+  left: 20px;
+  rotate: -45deg;
+}
+.ads__right-arrow {
+  right: 20px;
+  rotate: 135deg;
+}/*# sourceMappingURL=AdsBaner.css.map */

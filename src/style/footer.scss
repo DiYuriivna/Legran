@@ -1,0 +1,49 @@
+@import "./extends";
+
+.footer {
+  width: 100vw;
+  background-color: orange;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  @extend %grid;
+  align-items: start;
+  &__logo {
+    grid-column: 1 / span 3;
+    width: 100%;
+    cursor: pointer;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  ul li {
+    list-style: none;
+    margin-bottom: 15px;
+  }
+  &__about {
+    grid-column: 5 / span 2;
+  }
+  &__menu {
+    grid-column: 7 / span 2;
+  }
+  &__login {
+    grid-column: 9 / span 2;
+  }
+  &__contacts {
+    grid-column: span 2/ -1;
+    p {
+      text-align: right;
+    }
+  }
+  &__social-net {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      margin-top: 20px;
+      margin-left: 20px;
+      height: 25px;
+    }
+  }
+  &__phone {
+    font-size: 20px;
+  }
+}

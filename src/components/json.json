@@ -1,0 +1,12 @@
+[
+  {
+    src: "/assets/1.png",
+    caption: "Brazilian fish stew",
+    price: "29$"
+  },
+  {
+    src: "/assets/2.png",
+    caption: "Oven-Baked Watercress Bear",
+    price: "34$"
+  }
+];
