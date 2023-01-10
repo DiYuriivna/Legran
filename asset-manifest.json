@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.acc28b3b.css",
-    "main.js": "/my-app/static/js/main.80943e4e.js",
-    "static/media/texture.png": "/my-app/static/media/texture.d2726774b73bc04a22d5.png",
-    "static/media/cold.svg": "/my-app/static/media/cold.16a99e40090182ec9c637299516e5bd9.svg",
-    "static/media/pizza.svg": "/my-app/static/media/pizza.0d52e653028486df1cd922c04156c257.svg",
-    "static/media/burger.svg": "/my-app/static/media/burger.bbd850c07f319d12fef25edfa506718c.svg",
-    "static/media/pizza_empty.svg": "/my-app/static/media/pizza_empty.c02761c0d6a3dac01f3007a6811caf1d.svg",
-    "static/media/strong.svg": "/my-app/static/media/strong.d5640d834a0401f404b102e59896250a.svg",
-    "static/media/desert.svg": "/my-app/static/media/desert.c867a7b559c2d8c4eb2f8b877dd8261f.svg",
-    "static/media/hot.svg": "/my-app/static/media/hot.54874202ff8af77b7b05c70848c1f639.svg",
-    "static/media/wok.svg": "/my-app/static/media/wok.f673b7403ef65214285aefe4167e9de0.svg",
-    "static/media/fish.svg": "/my-app/static/media/fish.3e0a59374409fd696589815110b35ee5.svg",
-    "static/media/meat.svg": "/my-app/static/media/meat.46f372fc8c28524405afd50aa3be6add.svg",
-    "static/media/coctails.svg": "/my-app/static/media/coctails.e3fbe17f4335ba824208c13cbdc2862d.svg",
-    "static/media/sushi.svg": "/my-app/static/media/sushi.6e82cf7185987a5bd8828f0a327ddb2c.svg",
-    "static/media/beer.svg": "/my-app/static/media/beer.2d661990b81b6be1706eb67c13d5603f.svg",
-    "static/media/wine.svg": "/my-app/static/media/wine.e8f506494e7ef5fe4f709428c4078295.svg",
-    "static/media/soup.svg": "/my-app/static/media/soup.d6a77e0e4cfd1e3bf9543225e9347573.svg",
-    "index.html": "/my-app/index.html",
-    "main.acc28b3b.css.map": "/my-app/static/css/main.acc28b3b.css.map",
-    "main.80943e4e.js.map": "/my-app/static/js/main.80943e4e.js.map"
+    "main.css": "/Legran/static/css/main.03042bff.css",
+    "main.js": "/Legran/static/js/main.ac84c4d8.js",
+    "static/media/texture.png": "/Legran/static/media/texture.d2726774b73bc04a22d5.png",
+    "static/media/cold.svg": "/Legran/static/media/cold.16a99e40090182ec9c637299516e5bd9.svg",
+    "static/media/pizza.svg": "/Legran/static/media/pizza.0d52e653028486df1cd922c04156c257.svg",
+    "static/media/burger.svg": "/Legran/static/media/burger.bbd850c07f319d12fef25edfa506718c.svg",
+    "static/media/pizza_empty.svg": "/Legran/static/media/pizza_empty.c02761c0d6a3dac01f3007a6811caf1d.svg",
+    "static/media/strong.svg": "/Legran/static/media/strong.d5640d834a0401f404b102e59896250a.svg",
+    "static/media/desert.svg": "/Legran/static/media/desert.c867a7b559c2d8c4eb2f8b877dd8261f.svg",
+    "static/media/hot.svg": "/Legran/static/media/hot.54874202ff8af77b7b05c70848c1f639.svg",
+    "static/media/wok.svg": "/Legran/static/media/wok.f673b7403ef65214285aefe4167e9de0.svg",
+    "static/media/fish.svg": "/Legran/static/media/fish.3e0a59374409fd696589815110b35ee5.svg",
+    "static/media/meat.svg": "/Legran/static/media/meat.46f372fc8c28524405afd50aa3be6add.svg",
+    "static/media/coctails.svg": "/Legran/static/media/coctails.e3fbe17f4335ba824208c13cbdc2862d.svg",
+    "static/media/sushi.svg": "/Legran/static/media/sushi.6e82cf7185987a5bd8828f0a327ddb2c.svg",
+    "static/media/beer.svg": "/Legran/static/media/beer.2d661990b81b6be1706eb67c13d5603f.svg",
+    "static/media/wine.svg": "/Legran/static/media/wine.e8f506494e7ef5fe4f709428c4078295.svg",
+    "static/media/soup.svg": "/Legran/static/media/soup.d6a77e0e4cfd1e3bf9543225e9347573.svg",
+    "index.html": "/Legran/index.html",
+    "main.03042bff.css.map": "/Legran/static/css/main.03042bff.css.map",
+    "main.ac84c4d8.js.map": "/Legran/static/js/main.ac84c4d8.js.map"
   },
   "entrypoints": [
-    "static/css/main.acc28b3b.css",
-    "static/js/main.80943e4e.js"
+    "static/css/main.03042bff.css",
+    "static/js/main.ac84c4d8.js"
   ]
 }
