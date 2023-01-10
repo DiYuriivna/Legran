@@ -1,0 +1,97 @@
+/*--------- common table style ------------------------*/
+tr {
+  display: flex;
+  align-items: flex-end;
+  vertical-align: baseline;
+}
+
+td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1;
+  vertical-align: baseline;
+  padding-bottom: 0.5vw;
+}
+
+td:last-child {
+  font-weight: 600;
+}
+
+/* ---------------------------- COMPONENT MAIN STYLES  --------------------------------*/
+.orders-item {
+  grid-column: 2/-2;
+  display: flex;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  font-size: 18rem;
+  margin-bottom: 1vw;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /* ----------------------------left --------------------------------*/
+  /* ----------------------------right --------------------------------*/
+  /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+}
+.orders-item__wrap {
+  margin-top: calc(40px + 2vw);
+  margin-bottom: 2vw;
+}
+.orders-item__header, .orders-item__hr {
+  grid-column: 1/-1;
+}
+.orders-item__left-wrap, .orders-item__right-wrap {
+  flex: 1;
+  margin-top: 1%;
+}
+.orders-item__total {
+  flex: 5;
+  text-align: end;
+  vertical-align: bottom;
+  font-family: Fjalla One;
+}
+.orders-item__total-price {
+  flex: 1;
+  text-align: end;
+  font-family: Fjalla One;
+  font-size: 22rem;
+  vertical-align: bottom;
+}
+.orders-item__right-wrap tr {
+  background-color: white;
+  padding-left: 4%;
+}
+.orders-item__right-wrap tr:first-child {
+  padding-top: 3%;
+}
+.orders-item__right-wrap tr:last-child {
+  padding-bottom: 3%;
+}
+.orders-item__right-wrap td:first-child {
+  font-size: 16rem;
+}
+.orders-item__right-wrap td:last-child {
+  flex: 2;
+  padding-left: 1%;
+}
+@media (max-width: 1300px) {
+  .orders-item {
+    grid-column: 1/-1;
+    margin-bottom: 7%;
+  }
+}
+@media (max-width: 900px) {
+  .orders-item {
+    flex-direction: column;
+    grid-column: 2/-2;
+  }
+  .orders-item__wrap {
+    margin-top: calc(40px + 6vw);
+  }
+}
+@media (max-width: 650px) {
+  .orders-item {
+    grid-column: 1/-1;
+  }
+}/*# sourceMappingURL=orders_item.css.map */

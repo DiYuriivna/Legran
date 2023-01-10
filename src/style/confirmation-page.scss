@@ -1,0 +1,31 @@
+.confirm {
+  &__text {
+    grid-column: 1/ -1;
+    font-family: Fjalla One;
+    font-size: 50rem;
+    margin-top: 5vw;
+    // margin-bottom: 200px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  &__wrap {
+    height: 100%;
+    width: 100%;
+    display: contents;
+  }
+
+  /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+
+  &__text {
+    @media (max-width: 768px) {
+      font-size: 50rem;
+      margin-bottom: 10vw;
+    }
+    @media (max-width: 486px) {
+      font-size: 30rem;
+    }
+    @media (max-width: 300px) {
+      font-size: 20rem;
+    }
+  }
+}

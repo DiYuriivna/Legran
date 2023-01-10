@@ -1,19 +1,68 @@
 import React from "react";
+import { MyContext } from "../App";
+import { Link } from "react-router-dom";
 
-function Card({ src, caption, price, onClickPlus }) {
+function Card({
+  ingredients,
+  size,
+  description,
+  src,
+  caption,
+  price,
+  quantity,
+}) {
+  const { cartItems, onClickPlus, openAboutPage } = React.useContext(MyContext);
   const [added, SetAdded] = React.useState(false);
+
+  /* -----------About dish----------------------------------*/
+
+  const onClickImg = () => {
+    openAboutPage({
+      src,
+      caption,
+      quantity,
+      price,
+      size,
+      description,
+      ingredients,
+    });
+  };
+
+  const cardOnLoad = () => {
+    const newArray1 = cartItems.map((item) => item.src);
+    if (newArray1.includes(src)) {
+      if (added === false) {
+        SetAdded(true);
+      }
+    }
+  };
+
+  cartItems.length > 0 && cardOnLoad();
 
   const addbtnPressed = () => {
     SetAdded(!added);
-    onClickPlus({ src, caption, price });
+    onClickPlus({
+      src,
+      caption,
+      price,
+      quantity,
+      size,
+      description,
+      ingredients,
+    });
   };
 
   return (
     <figure className="card">
-      {" "}
       <div className="card__img-wrap">
-        {" "}
-        <img src={src} alt={caption} className="card__img" />
+        <Linkto="about">
+          <img
+            onClick={onClickImg}
+            src={src}
+            alt={caption}
+            className="card__img"
+          />
+        </Link>
         <button
           onClick={addbtnPressed}
           className={`card__addbtn ${added ? `card__addbtn_added` : ""}`}
@@ -28,8 +77,12 @@ function Card({ src, caption, price, onClickPlus }) {
         </button>
       </div>
       <div className="card__caption-wrap">
-        <figcaption className="card__caption">{caption}</figcaption>{" "}
-        <span className="card__price">{price}</span>
+        <figcaption>
+          <p className="card__caption">{caption}</p>
+        </figcaption>
+        <span className="card__price">
+          <p>{price}$</p>
+        </span>
       </div>
     </figure>
   );

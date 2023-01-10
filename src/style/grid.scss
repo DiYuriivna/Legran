@@ -1,0 +1,6 @@
+%grid {
+  display: grid;
+  grid-template-columns: repeat(12, 6.03%);
+  column-gap: 2.5%;
+  justify-content: center;
+}

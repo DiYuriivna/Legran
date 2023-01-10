@@ -1,0 +1,14 @@
+.order-item-list {
+  &__caption {
+    flex: 4;
+    text-align: start;
+  }
+  &__quantity {
+    flex: 1;
+    text-align: center;
+  }
+  &__price {
+    flex: 1;
+    text-align: end;
+  }
+}

@@ -1,0 +1,32 @@
+.confirm {
+  /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+}
+.confirm__text {
+  grid-column: 1/-1;
+  font-family: Fjalla One;
+  font-size: 50rem;
+  margin-top: 5vw;
+  text-align: center;
+  line-height: 1.5;
+}
+.confirm__wrap {
+  height: 100%;
+  width: 100%;
+  display: contents;
+}
+@media (max-width: 768px) {
+  .confirm__text {
+    font-size: 50rem;
+    margin-bottom: 10vw;
+  }
+}
+@media (max-width: 486px) {
+  .confirm__text {
+    font-size: 30rem;
+  }
+}
+@media (max-width: 300px) {
+  .confirm__text {
+    font-size: 20rem;
+  }
+}/*# sourceMappingURL=confirmation-page.css.map */

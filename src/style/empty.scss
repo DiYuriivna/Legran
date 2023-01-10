@@ -1,0 +1,43 @@
+.empty {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__wrap {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    font-size: 30rem;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    p {
+      font-size: 18rem;
+    }
+
+    &:hover {
+      color: orange;
+      svg * {
+        fill: orange;
+      }
+    }
+  }
+
+  & svg {
+    height: 30px;
+
+    margin-right: 10px;
+  }
+}

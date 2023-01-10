@@ -1,37 +1,51 @@
 @import "./extends";
 
-h2 {
-  font-family: Fjalla One;
-  font-size: 200%;
-  margin-bottom: 2%;
-}
 p {
   line-height: 1.5;
 }
-.grid {
-  @extend %grid;
-}
+
 /*-------------------Newdishes-wrapper---------------------------*/
 .newdishes {
   grid-column: 2/-2;
-  columns: 2 560px;
-  gap: 35px;
-  margin-top: 10%;
-  column-fill: auto;
+  display: flex;
+  column-gap: 2vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
 
-  &__para {
-    margin-bottom: 10%;
+  &__1blockwrap {
+    flex: 1;
+  }
+  &__2blockwrap {
+    flex: 1;
   }
 }
 
 /*-------------------Card---------------------------*/
 
 .card {
-  break-after: column;
   break-inside: avoid;
-  margin-bottom: 3%;
-  // display: inline-block;
+  display: inline-block;
+  height: inherit;
+  min-width: 0;
+  min-height: 0;
 
+  &__caption-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  & figcaption {
+    width: 80%;
+    overflow: hidden;
+  }
+  &__caption {
+    font-size: 16rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+    height: 22rem;
+  }
   &__price {
     font-size: 20px;
     font-weight: bold;
@@ -39,16 +53,21 @@ p {
 
   &__img-wrap {
     position: relative;
+    width: inherit;
+    height: inherit;
     font-size: 0;
   }
   &__img {
-    max-width: 560px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   /*------------------------------Add button----------------*/
   &__addbtn {
+    user-select: none;
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom: 0;
     z-index: 100;
     width: 35px;
@@ -78,10 +97,52 @@ p {
       color: white;
     }
   }
+}
 
-  &__caption-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+/*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+
+/*-------------------Newdishes-wrapper---------------------------*/
+.newdishes {
+  @media (min-width: 1600px) {
+    grid-column: 3/-3;
+  }
+  @media (max-width: 940px) {
+    columns: 43.81vw;
+    column-fill: balance;
+    display: inline-block;
+    grid-column: 1/-1;
+    .card {
+      max-width: 43.81vw;
+    }
+  }
+  @media (max-width: 812px) {
+    &__1blockwrap {
+      break-after: column;
+      .newdishes__para,
+      h2 {
+        column-span: all;
+      }
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    columns: unset;
+    display: inline-block;
+    .card {
+      max-width: 100%;
+    }
+    &__1blockwrap {
+      h2 {
+        font-size: 25px;
+      }
+      .newdishes__para {
+        display: none;
+      }
+    }
+    &__2blockwrap {
+      margin-top: 20px;
+    }
   }
 }

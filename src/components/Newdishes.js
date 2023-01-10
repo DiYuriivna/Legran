@@ -1,7 +1,11 @@
 import Card from "./Card";
 import React from "react";
 
-function Newdishes({ infoNewDish, onClickPlus, nax }) {
+import { MyContext } from "../App";
+
+function Newdishes() {
+  const { infoNewDish } = React.useContext(MyContext);
+
   const infoNewDish1 = infoNewDish.slice(0, 1);
   const infoNewDish2 = infoNewDish.slice(1);
   return (
@@ -17,23 +21,31 @@ function Newdishes({ infoNewDish, onClickPlus, nax }) {
 
           {infoNewDish1.map((object) => (
             <Card
+              ingredients={object.ingredients}
+              description={object.description}
+              size={object.size}
+              quantity={object.quantity}
               key={object.caption}
               src={object.src}
               caption={object.caption}
               price={object.price}
-              onClickPlus={nax}
             />
           ))}
         </div>
-        {infoNewDish2.map((object) => (
-          <Card
-            key={object.caption}
-            src={object.src}
-            caption={object.caption}
-            price={object.price}
-            onClickPlus={nax}
-          />
-        ))}
+        <div className="newdishes__2blockwrap">
+          {infoNewDish2.map((object) => (
+            <Card
+              ingredients={object.ingredients}
+              description={object.description}
+              size={object.size}
+              quantity={object.quantity}
+              key={object.caption}
+              src={object.src}
+              caption={object.caption}
+              price={object.price}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

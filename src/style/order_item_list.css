@@ -1,0 +1,12 @@
+.order-item-list__caption {
+  flex: 4;
+  text-align: start;
+}
+.order-item-list__quantity {
+  flex: 1;
+  text-align: center;
+}
+.order-item-list__price {
+  flex: 1;
+  text-align: end;
+}/*# sourceMappingURL=order_item_list.css.map */

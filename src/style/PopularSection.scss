@@ -1,20 +1,33 @@
-@import "./extends";
-
 .popular {
-  @extend %grid;
-  width: 100vw;
+  &__wrap {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+  }
+  width: 90%;
+  max-width: 1393px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 6.03%);
+  column-gap: 2.5%;
+
+  justify-content: center;
+  grid-column: 1/-1;
   padding-top: 10%;
 
-  background-color: rgb(255, 240, 247);
-
-  p,
-  h2 {
+  margin-bottom: calc(5vw - 150px);
+  &__para {
+    margin-bottom: 10%;
+    @media (max-width: 814px) {
+      display: none;
+    }
+  }
+  &__para,
+  &__title {
     grid-column: span 5/ -1;
     text-align: end;
   }
-  p {
-    margin-bottom: 10%;
-  }
+
   .card {
     margin-bottom: 30px;
   }
@@ -40,10 +53,55 @@
   }
   &__p7 {
     position: relative;
-    top: -40%;
+    top: -150px;
     grid-column: span 3/ -4;
   }
   &__p6 {
+    margin-top: 90px;
     grid-column: span 3/ -1;
+  }
+
+  /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+  @media (max-width: 1296px) {
+    display: block;
+    column-count: 3;
+    column-width: min-content;
+    column-gap: 2vw;
+    margin-bottom: 5vw;
+
+    &__para,
+    &__title {
+      text-align: start;
+    }
+
+    &__p1,
+    &__p2,
+    &__p3,
+    &__p4,
+    &__p5,
+    &__p6,
+    &__p7 {
+      margin-bottom: 10%;
+      margin-top: 0;
+      width: 100%;
+      position: static;
+      break-inside: avoid;
+      .card {
+        display: contents;
+      }
+    }
+  }
+  @media (max-width: 695px) {
+    width: auto;
+    margin: 0;
+    margin-bottom: 4vh;
+    display: block;
+    column-count: 2;
+    column-width: min-content;
+    column-gap: 2vw;
+    h2 {
+      column-span: all;
+      text-align: center;
+    }
   }
 }

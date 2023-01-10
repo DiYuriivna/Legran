@@ -1,23 +1,35 @@
 .popular {
+  width: 90%;
+  max-width: 1393px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(12, minmax(40px, 84px));
-  -moz-column-gap: 35px;
-       column-gap: 35px;
+  grid-template-columns: repeat(12, 6.03%);
+  -moz-column-gap: 2.5%;
+       column-gap: 2.5%;
   justify-content: center;
-}
-
-.popular {
-  width: 100vw;
+  grid-column: 1/-1;
   padding-top: 10%;
-  background-color: rgb(255, 240, 247);
+  margin-bottom: calc(5vw - 150px);
+  /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
 }
-.popular p,
-.popular h2 {
+.popular__wrap {
+  position: relative;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.popular__para {
+  margin-bottom: 10%;
+}
+@media (max-width: 814px) {
+  .popular__para {
+    display: none;
+  }
+}
+.popular__para, .popular__title {
   grid-column: span 5/-1;
   text-align: end;
-}
-.popular p {
-  margin-bottom: 10%;
 }
 .popular .card {
   margin-bottom: 30px;
@@ -43,9 +55,55 @@
 }
 .popular__p7 {
   position: relative;
-  top: -40%;
+  top: -150px;
   grid-column: span 3/-4;
 }
 .popular__p6 {
+  margin-top: 90px;
   grid-column: span 3/-1;
+}
+@media (max-width: 1296px) {
+  .popular {
+    display: block;
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-width: min-content;
+         column-width: min-content;
+    -moz-column-gap: 2vw;
+         column-gap: 2vw;
+    margin-bottom: 5vw;
+  }
+  .popular__para, .popular__title {
+    text-align: start;
+  }
+  .popular__p1, .popular__p2, .popular__p3, .popular__p4, .popular__p5, .popular__p6, .popular__p7 {
+    margin-bottom: 10%;
+    margin-top: 0;
+    width: 100%;
+    position: static;
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+  }
+  .popular__p1 .card, .popular__p2 .card, .popular__p3 .card, .popular__p4 .card, .popular__p5 .card, .popular__p6 .card, .popular__p7 .card {
+    display: contents;
+  }
+}
+@media (max-width: 695px) {
+  .popular {
+    width: auto;
+    margin: 0;
+    margin-bottom: 4vh;
+    display: block;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-width: min-content;
+         column-width: min-content;
+    -moz-column-gap: 2vw;
+         column-gap: 2vw;
+  }
+  .popular h2 {
+    -moz-column-span: all;
+         column-span: all;
+    text-align: center;
+  }
 }/*# sourceMappingURL=PopularSection.css.map */

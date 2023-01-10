@@ -1,28 +1,55 @@
-.coctail-section {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(40px, 84px));
-  -moz-column-gap: 35px;
-       column-gap: 35px;
-  justify-content: center;
-}
-
+/*# sourceMappingURL=extends.css.map */
 .coctail-section {
   margin-top: 10%;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+}
+.coctail-section h2 {
   text-align: center;
-  padding-top: 10vh;
-  padding-bottom: 20vh;
-  width: 100vw;
-  background-color: black;
+}
+.coctail-section__cards-wrap {
+  grid-column: 2/-2;
 }
 .coctail-section h2 {
   grid-column: 1/-1;
   color: white;
 }
 .coctail-section__cards {
-  grid-column: 2/-2;
   display: flex;
   justify-content: space-between;
+  -moz-column-gap: 2.5%;
+       column-gap: 2.5%;
 }
 .coctail-section__cards .card {
   color: white;
+}
+@media (max-width: 1175px) {
+  .coctail-section__cards-wrap {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 935px) {
+  .coctail-section__cards .card {
+    flex: 1;
+  }
+  .coctail-section__cards .card__img-wrap {
+    height: 217px;
+  }
+}
+@media (max-width: 840px) {
+  .coctail-section__cards-wrap {
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    grid-column: 1/-1;
+  }
+  .coctail-section__cards {
+    width: 900px;
+  }
+}
+@media (max-width: 600px) {
+  .coctail-section__cards {
+    width: 700px;
+  }
 }/*# sourceMappingURL=TopCoctails.css.map */

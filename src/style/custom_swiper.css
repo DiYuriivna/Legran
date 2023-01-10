@@ -1,0 +1,74 @@
+.ads {
+  display: grid;
+  grid-template-columns: repeat(12, 6.03%);
+  -moz-column-gap: 2.5%;
+       column-gap: 2.5%;
+  justify-content: center;
+}
+
+.ads__wrap {
+  grid-column: 1/-1;
+}
+
+.swiper {
+  height: 50vh;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+/*------------------ left-right btn--------------------------------------*/
+.swiper-button-next,
+.swiper-button-prev {
+  top: auto;
+  width: 10vw;
+  height: 10vw;
+  color: black;
+}
+
+.swiper-button-prev {
+  left: 0;
+  right: auto;
+}
+
+.swiper-button-next {
+  left: auto;
+  right: 0;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*----------------- center btn -----------------------------------*/
+.swiper-pagination-bullet-active {
+  background-color: #000;
+}
+
+@media (max-width: 750px) {
+  .swiper {
+    height: 30vh;
+  }
+  .swiper-button-next,
+.swiper-button-prev {
+    display: none;
+  }
+}/*# sourceMappingURL=custom_swiper.css.map */

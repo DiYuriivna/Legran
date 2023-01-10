@@ -1,0 +1,39 @@
+.empty {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.empty__wrap {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+.empty__text {
+  font-size: 30rem;
+  margin-bottom: 20px;
+}
+.empty__link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.empty__link p {
+  font-size: 18rem;
+}
+.empty__link:hover {
+  color: orange;
+}
+.empty__link:hover svg * {
+  fill: orange;
+}
+.empty svg {
+  height: 30px;
+  margin-right: 10px;
+}/*# sourceMappingURL=empty.css.map */

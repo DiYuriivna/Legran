@@ -1,32 +1,208 @@
 @import "./extends";
 
+$menu-size: 7vw;
+$menu-max-size: 100px;
+$menu-min-size: 85px;
+
+/*------------ACTIVE LINK STYLE ----------------------------*/
+
+.active {
+  .menu__item {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    border: 1px solid rgb(28, 28, 28);
+    .menu__item-img svg path {
+      fill: white;
+      stroke-width: 0.1;
+    }
+  }
+}
+
+/*-------------------  MENU -----------------------------*/
+
 .menu {
-  margin-top: 40px;
-  @extend %grid;
-  &__wrap {
-    grid-column: 1 / -1;
-    //   height: min-content;
-    display: flex;
+  user-select: none;
+  flex: 0;
+  &__open-food {
+    display: contents;
   }
 
-  //   padding: 20px;
-  //   max-width: calc(1440px / 2);
-  &__img {
-    height: 55%;
-    margin-right: 20px;
-    // margin-top: 20%;
+  &__wrap {
+    max-height: $menu-max-size;
+    min-height: $menu-min-size;
+    margin-top: 40px;
+    display: flex;
+
+    &:hover,
+    &_open {
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 5%;
+    }
   }
+
   &__food,
   &__drink {
-    width: 50%;
-    line-height: 100px;
-    height: 100px;
-    // display: inline;
+    flex: 1;
+    line-height: 80px;
+    height: $menu-size;
+    max-height: $menu-max-size;
+    min-height: $menu-min-size;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    font-size: 50px;
-    // font-family: Fjalla One;
+    font-size: 30rem;
+
+    img {
+      height: 30px;
+      margin-right: 3.5%;
+    }
+  }
+  &__drink {
+    margin-left: -1px;
+  }
+
+  /*----------- OPEN MENU --------------------------------*/
+
+  &__group {
+    display: flex;
+    column-gap: 0.3vw;
+  }
+
+  &__item {
+    max-height: $menu-max-size;
+    min-height: $menu-min-size;
+    max-width: $menu-max-size;
+    height: $menu-size;
+    width: $menu-size;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 15rem;
+
+    &:hover {
+      background-color: orange;
+      color: white;
+      border: none;
+      .menu__item-img svg path {
+        fill: white;
+      }
+    }
+
+    &-wrap {
+      height: 90%;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding-bottom: 10%;
+      padding-top: -10%;
+      align-items: center;
+    }
+    &-img {
+      width: 60%;
+      height: 60%;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-img svg path {
+      max-width: 100%;
+      max-height: 100%;
+      fill: black;
+    }
+  }
+
+  /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+
+  @media (max-width: 1200px) {
+    &__drink_none,
+    &__food_none {
+      font-size: 0;
+      img {
+        height: 60%;
+      }
+    }
+    &__item {
+      font-size: 14rem;
+      width: 9vw;
+    }
+    &__wrap:hover,
+    &__wrap_open {
+      column-gap: 3%;
+    }
+  }
+
+  @media (max-width: 854px) {
+    &__open-food {
+      display: flex;
+      column-gap: 20px;
+      width: 80%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      box-sizing: border-box;
+    }
+    &__item {
+      width: 85px;
+    }
+  }
+
+  @media (max-width: 570px) {
+    &__food,
+    &__drink {
+      font-size: 18px;
+
+      img {
+        height: 18px;
+      }
+    }
+    &__drink_none,
+    &__food_none {
+      font-size: 0;
+      img {
+        height: 60%;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__wrap {
+      flex-direction: column;
+      max-height: 170px;
+    }
+
+    &__drink {
+      margin-top: -1px;
+    }
+
+    &__wrap_open {
+      flex-direction: row;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+    &__open-food {
+      display: contents;
+    }
+    &__drink_none,
+    &__food_none {
+      width: 85px;
+      flex: none;
+    }
+    &__food_none {
+      order: 1;
+    }
+    &__item {
+      border-right: none;
+    }
+    &__group {
+      column-gap: 0;
+      border-right: 1px solid black;
+    }
   }
 }

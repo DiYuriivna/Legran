@@ -5,6 +5,9 @@
   font-family: Montserrat;
   box-sizing: border-box;
 }
+ul {
+  padding-inline-start: 0px;
+}
 
 .header {
   position: fixed;
@@ -12,7 +15,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  @extend %grid;
+
   &__bcg {
     background-image: url(../../public/assets/texture.png);
     width: 100%;
@@ -28,25 +31,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     height: 40px;
+
+    a {
+      color: black;
+      text-decoration: none;
+      flex: 1;
+      &:hover,
+      &active {
+        color: black;
+      }
+    }
   }
+
   /* ----------------------LEFT----------------------------------*/
   &__logo {
     font-family: Fjalla One;
     font-size: 25px;
+    flex: 1;
   }
   /* ----------------------CENTER----------------------------------*/
-  &__center-nav li {
+  &__center-nav {
+    flex: 1;
+    column-gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  &__center-nav a li {
     display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   &__delivery-btn,
   &__menu-btn {
-    font-size: 13px;
+    font-size: 16px;
     margin-right: 10px;
   }
   &__search-wrap {
     display: flex;
+    @media (max-width: 930px) {
+      display: none;
+    }
   }
   &__search {
     appearance: none;
@@ -93,8 +121,10 @@
 
   /* ----------------------RIGHT----------------------------------*/
   &__right-nav {
+    flex: 1;
     list-style: none;
     display: flex;
+    justify-content: end;
   }
   &__right-nav li button {
     height: 40px;
@@ -107,7 +137,15 @@
     background-color: transparent;
     margin-right: 2px;
   }
-  &__cart {
+  &__total {
+    line-height: 40px;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+  &__cart-btn {
+    cursor: pointer;
     background-color: black;
+    position: relative;
   }
 }

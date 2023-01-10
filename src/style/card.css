@@ -1,17 +1,4 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(40px, 84px));
-  -moz-column-gap: 35px;
-       column-gap: 35px;
-  justify-content: center;
-}
-
-h2 {
-  font-family: Fjalla One;
-  font-size: 200%;
-  margin-bottom: 2%;
-}
-
+/*# sourceMappingURL=extends.css.map */
 p {
   line-height: 1.5;
 }
@@ -19,25 +6,45 @@ p {
 /*-------------------Newdishes-wrapper---------------------------*/
 .newdishes {
   grid-column: 2/-2;
-  -moz-columns: 2 560px;
-       columns: 2 560px;
-  gap: 35px;
-  margin-top: 10%;
-  -moz-column-fill: auto;
-       column-fill: auto;
+  display: flex;
+  -moz-column-gap: 2vw;
+       column-gap: 2vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
 }
-.newdishes__para {
-  margin-bottom: 10%;
+.newdishes__1blockwrap {
+  flex: 1;
+}
+.newdishes__2blockwrap {
+  flex: 1;
 }
 
 /*-------------------Card---------------------------*/
 .card {
-  -moz-column-break-after: column;
-       break-after: column;
   -moz-column-break-inside: avoid;
        break-inside: avoid;
-  margin-bottom: 3%;
+  display: inline-block;
+  height: inherit;
+  min-width: 0;
+  min-height: 0;
   /*------------------------------Add button----------------*/
+}
+.card__caption-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.card figcaption {
+  width: 80%;
+  overflow: hidden;
+}
+.card__caption {
+  font-size: 16rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 90%;
+  height: 22rem;
 }
 .card__price {
   font-size: 20px;
@@ -45,14 +52,23 @@ p {
 }
 .card__img-wrap {
   position: relative;
+  width: inherit;
+  height: inherit;
   font-size: 0;
 }
 .card__img {
-  max-width: 560px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card__addbtn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  right: 0px;
+  right: 0;
   bottom: 0;
   z-index: 100;
   width: 35px;
@@ -81,8 +97,57 @@ p {
   background-color: black;
   color: white;
 }
-.card__caption-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+
+/*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+/*-------------------Newdishes-wrapper---------------------------*/
+@media (min-width: 1600px) {
+  .newdishes {
+    grid-column: 3/-3;
+  }
+}
+@media (max-width: 940px) {
+  .newdishes {
+    -moz-columns: 43.81vw;
+         columns: 43.81vw;
+    -moz-column-fill: balance;
+         column-fill: balance;
+    display: inline-block;
+    grid-column: 1/-1;
+  }
+  .newdishes .card {
+    max-width: 43.81vw;
+  }
+}
+@media (max-width: 812px) {
+  .newdishes__1blockwrap {
+    -moz-column-break-after: column;
+         break-after: column;
+  }
+  .newdishes__1blockwrap .newdishes__para,
+.newdishes__1blockwrap h2 {
+    -moz-column-span: all;
+         column-span: all;
+  }
+  .newdishes__1blockwrap h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 450px) {
+  .newdishes {
+    -moz-columns: unset;
+         columns: unset;
+    display: inline-block;
+  }
+  .newdishes .card {
+    max-width: 100%;
+  }
+  .newdishes__1blockwrap h2 {
+    font-size: 25px;
+  }
+  .newdishes__1blockwrap .newdishes__para {
+    display: none;
+  }
+  .newdishes__2blockwrap {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=card.css.map */

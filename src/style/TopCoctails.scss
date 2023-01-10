@@ -3,24 +3,63 @@
 .coctail-section {
   margin-top: 10%;
 
-  @extend %grid;
-  text-align: center;
-  padding-top: 10vh;
-  padding-bottom: 20vh;
-  width: 100vw;
-  background-color: black;
-
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  h2 {
+    text-align: center;
+  }
+  &__cards-wrap {
+    grid-column: 2/-2;
+  }
   h2 {
     grid-column: 1/-1;
     color: white;
   }
 
   &__cards {
-    grid-column: 2/-2;
     display: flex;
+
     justify-content: space-between;
+    column-gap: 2.5%;
     .card {
       color: white;
+    }
+  }
+
+  /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+
+  @media (max-width: 1175px) {
+    &__cards-wrap {
+      grid-column: 1/-1;
+    }
+  }
+
+  @media (max-width: 935px) {
+    &__cards {
+      .card {
+        flex: 1;
+      }
+      .card__img-wrap {
+        height: 217px;
+      }
+    }
+  }
+
+  @media (max-width: 840px) {
+    &__cards-wrap {
+      flex-wrap: wrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      grid-column: 1/-1;
+    }
+    &__cards {
+      width: 900px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__cards {
+      width: 700px;
     }
   }
 }

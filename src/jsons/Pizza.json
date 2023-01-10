@@ -1,0 +1,139 @@
+[
+  {
+    "divCapture": "Top ordering",
+    "items": [
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Prosciutto.png",
+        "caption": "Prosciutto e funghi",
+        "price": 25,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Detroit.png",
+        "caption": "Detroit-Style",
+        "price": 18,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "divCapture": "Classic",
+    "items": [
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Margarita.png",
+        "caption": "Margarita",
+        "price": 15,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Fiori.png",
+        "caption": "Fiori di zucca",
+        "price": 26,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Vegetariana.png",
+        "caption": "Vegetariana",
+        "price": 18,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Apizza.png",
+        "caption": "Apizza",
+        "price": 16,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Padellino.png",
+        "caption": "Al padellino",
+        "price": 22,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "divCapture": "Spicy",
+    "items": [
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Pugliese.png",
+        "caption": "Pugliese",
+        "price": 20,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Stuffed.png",
+        "caption": "Stuffed",
+        "price": 23,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "divCapture": "Vegeterian",
+    "items": [
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Fiori.png",
+        "caption": "Fiori di zucca",
+        "price": 18,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Vegetariana.png",
+        "caption": "Vegetariana",
+        "price": 22,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Apizza.png",
+        "caption": "Apizza",
+        "price": 16,
+        "quantity": 1
+      },
+      {
+        "size": "10 sm  |  400 gr",
+        "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "src": "assets/pizza/Padellino.png",
+        "caption": "Al padellino",
+        "price": 22,
+        "quantity": 1
+      }
+    ]
+  }
+]
