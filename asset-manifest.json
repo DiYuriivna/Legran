@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Legran/static/css/main.c5455d2b.css",
+    "main.css": "/Legran/static/css/main.6c797a06.css",
     "main.js": "/Legran/static/js/main.1d2f3120.js",
     "static/media/texture.png": "/Legran/static/media/texture.d2726774b73bc04a22d5.png",
     "static/media/cold.svg": "/Legran/static/media/cold.16a99e40090182ec9c637299516e5bd9.svg",
@@ -19,11 +19,11 @@
     "static/media/wine.svg": "/Legran/static/media/wine.e8f506494e7ef5fe4f709428c4078295.svg",
     "static/media/soup.svg": "/Legran/static/media/soup.d6a77e0e4cfd1e3bf9543225e9347573.svg",
     "index.html": "/Legran/index.html",
-    "main.c5455d2b.css.map": "/Legran/static/css/main.c5455d2b.css.map",
+    "main.6c797a06.css.map": "/Legran/static/css/main.6c797a06.css.map",
     "main.1d2f3120.js.map": "/Legran/static/js/main.1d2f3120.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5455d2b.css",
+    "static/css/main.6c797a06.css",
     "static/js/main.1d2f3120.js"
   ]
 }
