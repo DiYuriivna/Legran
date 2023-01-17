@@ -5,7 +5,6 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
-import Main from "./components/Main";
 
 import { Form } from "./components/Form";
 import { AboutDish } from "./pages/AboutDish";
@@ -116,7 +115,6 @@ function App() {
         <ScrollToTop />
         <Header />
         <Routes>
-          {/* <Route exact path="/" element={<Main />}></Route> */}
           <Route
             exact
             path="/"
