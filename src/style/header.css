@@ -35,14 +35,20 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 40px;
+  /* hover for desctop */
 }
 .header__nav a {
   color: black;
   text-decoration: none;
   flex: 1;
 }
-.header__nav a:hover, .header__nav aactive {
+.header__nav aactive {
   color: black;
+}
+@media (min-width: 1200px) {
+  .header__nav a:hover {
+    color: black;
+  }
 }
 .header__logo {
   font-family: Fjalla One;

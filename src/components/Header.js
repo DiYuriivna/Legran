@@ -14,22 +14,22 @@ function Header() {
       <div className="header__bcg"></div>
       <div className="grid">
         <nav className="header__nav">
-          <Linkto="">
+          <Link to="/">
             <div onClick={() => setItemClicked(false)} className="header__logo">
               Legran
             </div>
           </Link>
           <ul className="header__center-nav">
             {/* ----------------- future feature ---------------------------*/}
-            <Linkto="orders">
+            <Link to="/pizza">
+              <li className="header__menu-btn">Menu</li>
+            </Link>
+            <Link to="/orders">
               <li className="header__delivery-btn">Orders</li>
             </Link>
             {/* <li>
               <Search />
             </li>  */}
-            <Linkto="pizza">
-              <li className="header__menu-btn">Menu</li>
-            </Link>
           </ul>
           <ul className="header__right-nav">
             {cartItems.length > 0 && (
@@ -39,7 +39,7 @@ function Header() {
             )}
 
             <li>
-              <Linkto="cart">
+              <Link to="/cart">
                 <button className="header__cart-btn">
                   <img src="assets/cart.svg" />
                 </button>

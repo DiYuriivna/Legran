@@ -26,11 +26,13 @@
     p {
       font-size: 18rem;
     }
-
-    &:hover {
-      color: orange;
-      svg * {
-        fill: orange;
+    /* hover for desctop */
+    @media (min-width: 1200px) {
+      &:hover {
+        color: orange;
+        svg * {
+          fill: orange;
+        }
       }
     }
   }

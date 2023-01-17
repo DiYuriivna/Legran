@@ -1,0 +1,22 @@
+[
+  {
+    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    "size": "10 sm  |  400 gr",
+    "src": "assets/1.png",
+    "srcmob": "assets/1mob.png",
+    "caption": "Brazilian fish stew",
+    "quantity": 1,
+    "price": 29
+  },
+  {
+    "ingredients": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id semper risus in hendrerit gravida rutrum quisque non tellus.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    "size": "10 sm  |  400 gr",
+    "src": "assets/2.png",
+    "srcmob": "assets/2mob.png",
+    "caption": "Oven-Baked Watercress Bear",
+    "quantity": 1,
+    "price": 34
+  }
+]

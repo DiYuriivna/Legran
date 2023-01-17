@@ -27,6 +27,7 @@ function Newdishes() {
               quantity={object.quantity}
               key={object.caption}
               src={object.src}
+              srcmob={object.srcmob}
               caption={object.caption}
               price={object.price}
             />
@@ -41,6 +42,7 @@ function Newdishes() {
               quantity={object.quantity}
               key={object.caption}
               src={object.src}
+              srcmob={object.srcmob}
               caption={object.caption}
               price={object.price}
             />

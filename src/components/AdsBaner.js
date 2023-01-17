@@ -23,25 +23,42 @@ function AdsBaner() {
           className="ads__all-img"
         >
           <SwiperSlide>
-            <img
-              src="assets/baner.png"
-              alt="-50% All breakfast"
-              className="ads__baner"
-            />
+            <picture>
+              <source
+                media="(max-width: 575px)"
+                srcSet="assets/baner_mob.jpg 1x, assets/banermob2x.png 2x"
+                sizes="575px"
+              />
+              <source srcSet="assets/baner.jpg 1200w" sizes="1200px" />
+
+              <img
+                src="assets/baner.jpg"
+                alt="-50% All breakfast"
+                className="ads__baner"
+              />
+            </picture>
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              src="assets/baner2.png"
-              alt="set of shots 9$"
-              className="ads__baner"
-            />
+            <picture>
+              <source
+                media="(max-width: 575px)"
+                srcSet="assets/baner2_mob.jpg 1x, assets/baner2mob2x.png 2x"
+                sizes="575px"
+              />
+              <source srcSet="assets/baner2.jpg 1200w" sizes="1200px" />
+              <img src="assets/baner2.jpg" className="ads__baner" />
+            </picture>
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              src="assets/baner3.png"
-              alt="Philadelfia 10$"
-              className="ads__baner"
-            />
+            <picture>
+              <source
+                media="(max-width: 575px)"
+                srcSet="assets/baner3_mob.jpg 1x, assets/baner3mob2x.png 2x"
+                sizes="575px"
+              />
+              <source srcSet="assets/baner3.jpg 1200w" sizes="1200px" />
+              <img src="assets/baner3.jpg" className="ads__baner" />
+            </picture>
           </SwiperSlide>
         </Swiper>
       </div>

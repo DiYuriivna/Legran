@@ -55,12 +55,12 @@ function CartItem({
 
   return (
     <div className="cart__items-wrap">
-      <button className="cart__delete" onClick={() => deleteItemFromCart(id)}>
+      <div className="cart__delete" onClick={() => deleteItemFromCart(id)}>
         x
-      </button>
+      </div>
 
       <div className="cart__item">
-        <Linkto="about">
+        <Link to="/about">
           <div className="cart__img-wrap" onClick={onClickImg}>
             <img className="cart__img" src={src} alt={caption} />
           </div>
@@ -68,20 +68,16 @@ function CartItem({
           <h5 onClick={onClickImg}>{caption}</h5>
         </Link>
         <div className="cart__plus-minus-cover">
-          <button
+          <div
             className="cart__minus"
             onClick={quantyItems > 1 && minusOneItem}
           >
             -
-          </button>
-          <input
-            className="cart__plus-minus-input"
-            type="tel"
-            value={quantyItems}
-          />
-          <button className="cart__plus" onClick={plusOneItem}>
+          </div>
+          <div className="cart__plus-minus-input">{quantyItems}</div>
+          <div className="cart__plus" onClick={plusOneItem}>
             +
-          </button>
+          </div>
         </div>
         <p className="cart__price">{price * quantity}$</p>
       </div>

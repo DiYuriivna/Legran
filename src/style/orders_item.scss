@@ -24,18 +24,27 @@ td:last-child {
   grid-column: 2/-2;
   display: flex;
   column-gap: 5%;
-  font-size: 18rem;
-  margin-bottom: 1vw;
+  font-size: 16rem;
+  margin-bottom: 7vh;
   user-select: none;
 
   &__wrap {
     margin-top: calc(40px + 2vw);
-    margin-bottom: 2vw;
+    margin-bottom: 8vw;
   }
 
-  &__header,
   &__hr {
     grid-column: 1/-1;
+  }
+  &__header {
+    margin-bottom: 1%;
+    margin-top: 21rem;
+    &-wrap {
+      grid-column: 1/-1;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
 
   &__left-wrap,
@@ -46,16 +55,18 @@ td:last-child {
 
   /* ----------------------------left --------------------------------*/
   &__total {
-    flex: 5;
-    text-align: end;
-    vertical-align: bottom;
+    margin-bottom: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    column-gap: 8px;
     font-family: Fjalla One;
     &-price {
-      flex: 1;
-      text-align: end;
       font-family: Fjalla One;
       font-size: 22rem;
-      vertical-align: bottom;
+    }
+    p {
+      margin: 0;
     }
   }
 
@@ -85,16 +96,25 @@ td:last-child {
 
   @media (max-width: 1300px) {
     grid-column: 1/-1;
-    margin-bottom: 7%;
   }
   @media (max-width: 900px) {
     flex-direction: column;
     grid-column: 2/-2;
+
     &__wrap {
       margin-top: calc(40px + 6vw);
     }
   }
   @media (max-width: 650px) {
     grid-column: 1/-1;
+    &__right-wrap {
+    }
+  }
+  @media (max-width: 410px) {
+    &__right-wrap {
+      td:last-child {
+        flex: 1;
+      }
+    }
   }
 }

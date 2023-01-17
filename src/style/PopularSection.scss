@@ -10,10 +10,10 @@
   display: grid;
   grid-template-columns: repeat(12, 6.03%);
   column-gap: 2.5%;
-
+  padding-top: 5%;
   justify-content: center;
   grid-column: 1/-1;
-  padding-top: 10%;
+  // padding-top: 10%;
 
   margin-bottom: calc(5vw - 150px);
   &__para {
@@ -81,7 +81,7 @@
     &__p5,
     &__p6,
     &__p7 {
-      margin-bottom: 10%;
+      margin-bottom: 20%;
       margin-top: 0;
       width: 100%;
       position: static;
@@ -94,11 +94,11 @@
   @media (max-width: 695px) {
     width: auto;
     margin: 0;
-    margin-bottom: 4vh;
+    margin-bottom: 14vw;
     display: block;
     column-count: 2;
     column-width: min-content;
-    column-gap: 2vw;
+    column-gap: 4vw;
     h2 {
       column-span: all;
       text-align: center;

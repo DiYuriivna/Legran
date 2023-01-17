@@ -33,7 +33,6 @@ $menu-min-size: 85px;
     margin-top: 40px;
     display: flex;
 
-    &:hover,
     &_open {
       align-items: center;
       justify-content: space-between;
@@ -67,7 +66,7 @@ $menu-min-size: 85px;
 
   &__group {
     display: flex;
-    column-gap: 0.3vw;
+    column-gap: 0.5vw;
   }
 
   &__item {
@@ -82,15 +81,6 @@ $menu-min-size: 85px;
     align-items: center;
     color: black;
     font-size: 15rem;
-
-    &:hover {
-      background-color: orange;
-      color: white;
-      border: none;
-      .menu__item-img svg path {
-        fill: white;
-      }
-    }
 
     &-wrap {
       height: 90%;
@@ -120,6 +110,27 @@ $menu-min-size: 85px;
 
   /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
 
+  /* hover for desctop */
+  @media (min-width: 1200px) {
+    &__item {
+      &:hover {
+        background-color: orange;
+        color: white;
+        border: none;
+        .menu__item-img svg path {
+          fill: white;
+        }
+      }
+    }
+    &__wrap {
+      &:hover {
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 5%;
+      }
+    }
+  }
+
   @media (max-width: 1200px) {
     &__drink_none,
     &__food_none {
@@ -128,11 +139,12 @@ $menu-min-size: 85px;
         height: 60%;
       }
     }
+
     &__item {
       font-size: 14rem;
       width: 9vw;
     }
-    &__wrap:hover,
+
     &__wrap_open {
       column-gap: 3%;
     }
@@ -168,12 +180,28 @@ $menu-min-size: 85px;
         height: 60%;
       }
     }
-  }
 
-  @media (max-width: 450px) {
+    &__wrap {
+      column-gap: 0;
+    }
+    &__open-food &__group {
+      border-right: none;
+    }
+    &__open-drink &__group,
+    &__open-drink &__group &__item {
+      border-left: none;
+    }
+    &__open-drink &__group &__item {
+      border-right: 1px solid black;
+    }
+
     &__wrap {
       flex-direction: column;
       max-height: 170px;
+    }
+    &__food,
+    &__drink {
+      min-width: 100%;
     }
 
     &__drink {
@@ -191,18 +219,19 @@ $menu-min-size: 85px;
     }
     &__drink_none,
     &__food_none {
+      min-width: auto;
       width: 85px;
       flex: none;
     }
     &__food_none {
-      order: 1;
+      // order: 1;
     }
     &__item {
       border-right: none;
     }
     &__group {
       column-gap: 0;
-      border-right: 1px solid black;
+      border-right: none;
     }
   }
 }

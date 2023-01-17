@@ -19,6 +19,7 @@
   flex: 0;
   /*----------- OPEN MENU --------------------------------*/
   /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+  /* hover for desctop */
 }
 .menu__open-food {
   display: contents;
@@ -29,7 +30,7 @@
   margin-top: 40px;
   display: flex;
 }
-.menu__wrap:hover, .menu__wrap_open {
+.menu__wrap_open {
   align-items: center;
   justify-content: space-between;
   -moz-column-gap: 5%;
@@ -56,8 +57,8 @@
 }
 .menu__group {
   display: flex;
-  -moz-column-gap: 0.3vw;
-       column-gap: 0.3vw;
+  -moz-column-gap: 0.5vw;
+       column-gap: 0.5vw;
 }
 .menu__item {
   max-height: 100px;
@@ -71,14 +72,6 @@
   align-items: center;
   color: black;
   font-size: 15rem;
-}
-.menu__item:hover {
-  background-color: orange;
-  color: white;
-  border: none;
-}
-.menu__item:hover .menu__item-img svg path {
-  fill: white;
 }
 .menu__item-wrap {
   height: 90%;
@@ -103,6 +96,22 @@
   max-height: 100%;
   fill: black;
 }
+@media (min-width: 1200px) {
+  .menu__item:hover {
+    background-color: orange;
+    color: white;
+    border: none;
+  }
+  .menu__item:hover .menu__item-img svg path {
+    fill: white;
+  }
+  .menu__wrap:hover {
+    align-items: center;
+    justify-content: space-between;
+    -moz-column-gap: 5%;
+         column-gap: 5%;
+  }
+}
 @media (max-width: 1200px) {
   .menu__drink_none, .menu__food_none {
     font-size: 0;
@@ -114,7 +123,7 @@
     font-size: 14rem;
     width: 9vw;
   }
-  .menu__wrap:hover, .menu__wrap_open {
+  .menu__wrap_open {
     -moz-column-gap: 3%;
          column-gap: 3%;
   }
@@ -146,11 +155,25 @@
   .menu__drink_none img, .menu__food_none img {
     height: 60%;
   }
-}
-@media (max-width: 450px) {
+  .menu__wrap {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .menu__open-food .menu__group {
+    border-right: none;
+  }
+  .menu__open-drink .menu__group, .menu__open-drink .menu__group .menu__item {
+    border-left: none;
+  }
+  .menu__open-drink .menu__group .menu__item {
+    border-right: 1px solid black;
+  }
   .menu__wrap {
     flex-direction: column;
     max-height: 170px;
+  }
+  .menu__food, .menu__drink {
+    min-width: 100%;
   }
   .menu__drink {
     margin-top: -1px;
@@ -165,11 +188,9 @@
     display: contents;
   }
   .menu__drink_none, .menu__food_none {
+    min-width: auto;
     width: 85px;
     flex: none;
-  }
-  .menu__food_none {
-    order: 1;
   }
   .menu__item {
     border-right: none;
@@ -177,6 +198,6 @@
   .menu__group {
     -moz-column-gap: 0;
          column-gap: 0;
-    border-right: 1px solid black;
+    border-right: none;
   }
 }/*# sourceMappingURL=MenuBar.css.map */

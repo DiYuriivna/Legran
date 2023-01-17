@@ -5,14 +5,14 @@ export const MenuDrinkItem = (props) => {
   const { setDrinkItemClicked, setItemClicked } = useContext(MyContext);
 
   return (
-    <div
-      onClick={() => {
-        setDrinkItemClicked(true);
-        setItemClicked(false);
-      }}
-      className="menu__item"
-    >
-      <div className="menu__item-wrap">
+    <div className="menu__item">
+      <div
+        className="menu__item-wrap"
+        onClick={() => {
+          setDrinkItemClicked(true);
+          setItemClicked(false);
+        }}
+      >
         <div className="menu__item-img">{props.children}</div>
         {props.capture}
       </div>

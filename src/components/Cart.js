@@ -27,9 +27,9 @@ function Cart({ cartItems }) {
           ) : (
             <div className="grid">
               <h1>Cart</h1>
-              <button onClick={goBack} className="close-page-btn">
+              <div onClick={goBack} className="close-page-btn">
                 X
-              </button>
+              </div>
               {cartItems.length > 0 ? (
                 <FilledCart
                   orderId={orderId}

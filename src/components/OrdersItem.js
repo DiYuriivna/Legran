@@ -15,7 +15,13 @@ export const OrdersItem = ({
   return (
     <>
       <div className=" grid">
-        <h2 className="orders-item__header">Order #{id}</h2>
+        <div className="orders-item__header-wrap">
+          <h2 className="orders-item__header">Order #{id}</h2>
+          <div className="orders-item__total">
+            <p>total cost</p>
+            <p className="orders-item__total-price">{totalCost} $</p>
+          </div>
+        </div>
         <hr className="orders-item__hr" />
 
         <div className="orders-item">
@@ -29,13 +35,6 @@ export const OrdersItem = ({
                   caption={item.caption}
                 />
               ))}
-
-              <tr>
-                <td className="orders-item__total" colspan="2">
-                  total cost
-                </td>
-                <td className="orders-item__total-price">{totalCost} $</td>
-              </tr>
             </tbody>
           </table>
           {/* -------------------- right --------------------------------- */}

@@ -10,6 +10,7 @@ function Card({
   caption,
   price,
   quantity,
+  srcmob,
 }) {
   const { cartItems, onClickPlus, openAboutPage } = React.useContext(MyContext);
   const [added, SetAdded] = React.useState(false);
@@ -18,6 +19,7 @@ function Card({
 
   const onClickImg = () => {
     openAboutPage({
+      srcmob,
       src,
       caption,
       quantity,
@@ -42,6 +44,7 @@ function Card({
   const addbtnPressed = () => {
     SetAdded(!added);
     onClickPlus({
+      srcmob,
       src,
       caption,
       price,
@@ -55,15 +58,19 @@ function Card({
   return (
     <figure className="card">
       <div className="card__img-wrap">
-        <Linkto="about">
-          <img
-            onClick={onClickImg}
-            src={src}
-            alt={caption}
-            className="card__img"
-          />
+        <Link to="/about">
+          <picture>
+            <source media="(max-width: 575px)" srcSet={srcmob} sizes="575px" />
+            <source srcSet={`${src} 1200w`} sizes="1200px" />
+            <img
+              src={src}
+              className="card__img"
+              onClick={onClickImg}
+              alt={caption}
+            />
+          </picture>
         </Link>
-        <button
+        <div
           onClick={addbtnPressed}
           className={`card__addbtn ${added ? `card__addbtn_added` : ""}`}
         >
@@ -74,7 +81,7 @@ function Card({
           >
             {added ? "✓" : "+"}
           </div>
-        </button>
+        </div>
       </div>
       <div className="card__caption-wrap">
         <figcaption>

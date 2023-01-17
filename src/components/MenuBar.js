@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { MenuItem } from "./MenuItem";
 import { MenuDrinkItem } from "./MenuDrinkItem";
+import { isMobile } from "react-device-detect";
 
 import { ReactComponent as Burger } from "../menu/burger.svg";
 import { ReactComponent as Fish } from "../menu/fish.svg";
@@ -30,12 +31,12 @@ function MenuBar() {
     setDrinkItemClicked,
   } = useContext(MyContext);
 
-  useEffect(() => {
-    setItemClicked(false);
-    setDrinkItemClicked(false);
-    setIsFoodOpen(false);
-    setDrinkOpen(false);
-  }, []);
+  // useEffect(() => {
+  //   setItemClicked(false);
+  //   setDrinkItemClicked(false);
+  //   setIsFoodOpen(false);
+  //   setDrinkOpen(false);
+  // }, []);
 
   const [isFoodOpen, setIsFoodOpen] = useState(false);
   const [isDrinkOpen, setDrinkOpen] = useState(false);
@@ -54,14 +55,14 @@ function MenuBar() {
     setItemClicked(false);
   };
   const onFoodClick = () => {
-    setIsFoodOpen(true);
-    setDrinkOpen(false);
+    // setIsFoodOpen(true);
+    // setDrinkOpen(false);
     setDrinkItemClicked(false);
     setItemClicked(true);
   };
   const onDrinkClick = () => {
-    setDrinkOpen(true);
-    setIsFoodOpen(false);
+    // setDrinkOpen(true);
+    // setIsFoodOpen(false);
     setItemClicked(false);
     setDrinkItemClicked(true);
   };
@@ -85,12 +86,12 @@ function MenuBar() {
               <div className="menu__open-food">
                 <div className="menu__group">
                   <nav>
-                    <NavLink className={isLinkActive}to="fish">
+                    <NavLink className={isLinkActive} to="/fish">
                       <MenuItem capture="fish">
                         <Fish />
                       </MenuItem>
                     </NavLink>
-                    <NavLink className={isLinkActive}to="meat">
+                    <NavLink className={isLinkActive} to="/meat">
                       <MenuItem capture="meat">
                         <Meat />
                       </MenuItem>
@@ -99,18 +100,18 @@ function MenuBar() {
                 </div>
                 <div className="menu__group menu__group-three">
                   <nav>
-                    <NavLink className={isLinkActive}to="soup">
+                    <NavLink className={isLinkActive} to="/soup">
                       <MenuItem capture="soup">
                         <Soup />
                       </MenuItem>
                     </NavLink>
-                    <NavLink className={isLinkActive}to="burger">
+                    <NavLink className={isLinkActive} to="/burger">
                       <MenuItem capture="burger">
                         <Burger />
                       </MenuItem>
                     </NavLink>
 
-                    <NavLink className={isLinkActive}to="pizza">
+                    <NavLink className={isLinkActive} to="/pizza">
                       <MenuItem capture="pizza">
                         <Pizza />
                       </MenuItem>
@@ -119,13 +120,13 @@ function MenuBar() {
                 </div>
                 <div className="menu__group">
                   <nav>
-                    <NavLink className={isLinkActive}to="sushi">
-                      <MenuItem img="Sushi" capture="sushi">
+                    <NavLink className={isLinkActive} to="/sushi">
+                      <MenuItem capture="sushi">
                         <Sushi />
                       </MenuItem>
                     </NavLink>
-                    <NavLink className={isLinkActive}to="wok">
-                      <MenuItem img="Wok" capture="wok">
+                    <NavLink className={isLinkActive} to="/wok">
+                      <MenuItem capture="wok">
                         <Wok />
                       </MenuItem>
                     </NavLink>
@@ -133,7 +134,7 @@ function MenuBar() {
                 </div>
                 <div className="menu__group">
                   <nav>
-                    <NavLink className={isLinkActive}to="desert">
+                    <NavLink className={isLinkActive} to="/desert">
                       <MenuItem capture="desert">
                         <Desert />
                       </MenuItem>
@@ -142,10 +143,10 @@ function MenuBar() {
                 </div>
               </div>
             ) : (
-              <Linkto="pizza">
+              <NavLink className={isLinkActive} to="/pizza">
                 <div
-                  onMouseEnter={onFoodHover}
                   onClick={onFoodClick}
+                  onMouseEnter={isMobile ? () => false : onFoodHover}
                   className={`menu__food ${
                     isDrinkOpen || isDrinkItemClicked ? `menu__food_none` : ""
                   }`}
@@ -153,18 +154,18 @@ function MenuBar() {
                   <img className="menu__img" src="assets/food.svg" alt="" />{" "}
                   FOOD
                 </div>
-              </Link>
+              </NavLink>
             )}
             {isDrinkOpen || isDrinkItemClicked ? (
-              <div className="menu__open-food">
+              <div className="menu__open-food menu__open-drink">
                 <div className="menu__group">
                   <nav>
-                    <NavLink className={isLinkActive}to="cold">
+                    <NavLink className={isLinkActive} to="/cold">
                       <MenuDrinkItem capture="cold">
                         <Cold />
                       </MenuDrinkItem>
                     </NavLink>
-                    <NavLink className={isLinkActive}to="hot">
+                    <NavLink className={isLinkActive} to="/hot">
                       <MenuDrinkItem capture="hot">
                         <Hot />
                       </MenuDrinkItem>
@@ -174,19 +175,19 @@ function MenuBar() {
 
                 <div className="menu__group menu__group-three">
                   <nav>
-                    <NavLink className={isLinkActive}to="strong">
+                    <NavLink className={isLinkActive} to="/strong">
                       <MenuDrinkItem capture="strong">
                         <Strong />
                       </MenuDrinkItem>
                     </NavLink>
 
-                    <NavLink className={isLinkActive}to="wine">
+                    <NavLink className={isLinkActive} to="/wine">
                       <MenuDrinkItem capture="wine">
                         <Wine />
                       </MenuDrinkItem>
                     </NavLink>
 
-                    <NavLink className={isLinkActive}to="beer">
+                    <NavLink className={isLinkActive} to="/beer">
                       <MenuDrinkItem capture="beer">
                         <Beer />
                       </MenuDrinkItem>
@@ -196,7 +197,7 @@ function MenuBar() {
 
                 <div className="menu__group">
                   <nav>
-                    <NavLink className={isLinkActive}to="coctails">
+                    <NavLink className={isLinkActive} to="/coctails">
                       <MenuDrinkItem capture="coctails">
                         <Coctails />
                       </MenuDrinkItem>
@@ -205,9 +206,9 @@ function MenuBar() {
                 </div>
               </div>
             ) : (
-              <Linkto="beer">
+              <NavLink className={isLinkActive} to="/beer">
                 <div
-                  onMouseEnter={onDrinkHover}
+                  onMouseEnter={isMobile ? () => false : onDrinkHover}
                   onClick={onDrinkClick}
                   className={`menu__drink ${
                     isFoodOpen || isItemClicked ? `menu__drink_none` : ""
@@ -216,7 +217,7 @@ function MenuBar() {
                   <img className="menu__img" src="assets/drink.svg" alt="" />{" "}
                   DRINKS
                 </div>
-              </Link>
+              </NavLink>
             )}
           </div>
         </div>

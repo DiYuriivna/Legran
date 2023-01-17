@@ -24,16 +24,16 @@ $cart-item-hight: 100px;
 
 .cart {
   flex: 1;
-  height: 100%;
+  // height: 100%;
   font-size: 17rem;
-  width: 100%;
+  // width: 100%;
   padding-top: 40px;
   display: flex;
 
   h1 {
     font-family: Fjalla One;
     font-size: 200%;
-    margin-bottom: 2%;
+    // margin-bottom: 2%;
     grid-column: 3 / -3;
     text-align: center;
     align-self: center;
@@ -81,9 +81,11 @@ $cart-item-hight: 100px;
   }
 
   /*plus-minus*/
-  &____plus-minus-cover {
+  &__plus-minus-cover {
     width: 25%;
     text-align: center;
+    display: flex;
+    align-items: center;
   }
   &__plus,
   &__minus {
@@ -95,10 +97,7 @@ $cart-item-hight: 100px;
     height: 25px;
     font-size: 20rem;
     line-height: 22px;
-    &:hover {
-      background-color: rgba($color: #000000, $alpha: 0.3);
-      border: 1px solid rgba($color: #000000, $alpha: 0.3);
-    }
+
     &:active {
       background-color: black;
       color: white;
@@ -121,6 +120,9 @@ $cart-item-hight: 100px;
 
   /*delete btn*/
   &__delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background-color: transparent;
     font-size: 25rem;
@@ -128,9 +130,6 @@ $cart-item-hight: 100px;
     height: $cart-item-hight;
     width: 40px;
     flex-shrink: 0;
-    &:hover {
-      background-color: rgba($color: #000000, $alpha: 0.3);
-    }
   }
 
   /*total price*/
@@ -262,15 +261,11 @@ $cart-item-hight: 100px;
       background-color: rgb(0, 0, 0);
       font-size: 18rem;
       color: white;
-      &:hover {
-        background-color: orange;
-        color: white;
-      }
     }
   }
   &__close-drop-down {
     cursor: pointer;
-
+    color: black;
     border: none;
     background-color: transparent;
     padding: 0;
@@ -279,10 +274,6 @@ $cart-item-hight: 100px;
     line-height: 25px;
     height: 40px;
     width: 150px;
-
-    &:hover {
-      background-color: rgba($color: #000000, $alpha: 0.3);
-    }
   }
   /*--------------------comment-------------------*/
   &__comment {
@@ -322,6 +313,27 @@ $cart-item-hight: 100px;
   }
 
   /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+
+  /* hover for desctop */
+  @media (min-width: 1200px) {
+    &__close-drop-down:hover {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+    li:hover {
+      background-color: orange;
+      color: white;
+    }
+
+    &__delete:hover {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    &__plus:hover,
+    &__minus:hover {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      border: 1px solid rgba($color: #000000, $alpha: 0.3);
+    }
+  }
 
   @media (max-width: 1382px) {
     &__items {
@@ -366,10 +378,14 @@ $cart-item-hight: 100px;
     }
     &__delete {
       height: 50px;
+      width: 20px;
     }
-
+    &__total-price {
+      margin-left: 20px;
+    }
     &__wrap-btn {
-      padding: 0 30px;
+      padding: 0;
+      margin-bottom: 40px;
     }
     &__details-wrap {
       background-color: white;
@@ -404,9 +420,7 @@ $cart-item-hight: 100px;
     &__delete {
       width: 20px;
     }
-    &__total-price {
-      margin-left: 20px;
-    }
+
     &__item {
       h5 {
         width: 40%;
@@ -423,9 +437,6 @@ $cart-item-hight: 100px;
     }
     &__adress {
       width: calc(100% - 20px);
-    }
-    &__wrap-btn {
-      padding: 0;
     }
   }
 }

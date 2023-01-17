@@ -8,7 +8,7 @@ export const Empty = (props) => {
       <div className="grid">
         <div className="empty">
           <p className="empty__text">{props.text} </p>
-          <Linkto="pizza">
+          <Link to="/pizza">
             <div className="empty__link">
               {props.linkIcon} <p> {props.linkText}</p>
             </div>

@@ -2,6 +2,15 @@ nav {
   display: contents;
 }
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 div {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -68,6 +77,7 @@ li {
 h2 {
   font-family: Fjalla One;
   margin-bottom: 20rem;
+  margin-top: 40rem;
   font-size: 35rem;
 }
 
@@ -97,29 +107,6 @@ h2 + p {
   left: 0;
 }
 
-.close-page-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-  grid-column: -2/-1;
-  background-color: transparent;
-  font-size: 80px;
-  font-weight: 200;
-  border: none;
-  line-height: 100px;
-  text-align: right;
-  position: -webkit-sticky;
-  position: sticky;
-}
-.close-page-btn:hover {
-  font-size: 70px;
-}
-.close-page-btn:active {
-  font-size: 70px;
-}
-
 .btn {
   width: 180px;
   height: 60px;
@@ -127,23 +114,38 @@ h2 + p {
   color: white;
   border: none;
   font-size: 20rem;
+  /* hover for desctop */
 }
-.btn:hover, .btn:active {
+.btn:active {
   background-color: orange;
   color: black;
+}
+@media (min-width: 1200px) {
+  .btn:hover {
+    background-color: orange;
+    color: black;
+  }
 }
 .btn:disabled {
   background-color: #bebebe;
   cursor: default;
   color: rgb(226, 226, 226);
+  /* hover for desctop */
 }
-.btn:disabled:hover {
-  color: rgb(226, 226, 226);
+@media (min-width: 1200px) {
+  .btn:disabled:hover {
+    color: rgb(226, 226, 226);
+  }
 }
 
-.btn_about_added:hover {
-  background-color: black;
-  color: white;
+.btn_about_added {
+  /* hover for desctop */
+}
+@media (min-width: 1200px) {
+  .btn_about_added:hover {
+    background-color: black;
+    color: white;
+  }
 }
 
 /*-------------- BCG COLOR ---------------------------------*/
@@ -151,7 +153,6 @@ h2 + p {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
   min-height: 100%;
   flex: 1;
   justify-content: center;
@@ -233,9 +234,12 @@ li {
   cursor: pointer;
   padding: 30px;
   margin-right: -30px;
+  /* hover for desctop */
 }
-.scroll-top img:hover {
-  margin-bottom: 10px;
+@media (min-width: 1200px) {
+  .scroll-top img:hover {
+    margin-bottom: 10px;
+  }
 }
 .scroll-top__wrap {
   pointer-events: none;
@@ -246,24 +250,54 @@ li {
   z-index: 3000;
 }
 
-/*-------------- btn -------------------------*/
+/*-------------- close btn -------------------------*/
+.close-page-btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  grid-column: -2/-1;
+  background-color: transparent;
+  font-size: 80px;
+  font-weight: 200;
+  border: none;
+  line-height: 100px;
+  text-align: right;
+  position: -webkit-sticky;
+  position: sticky;
+  color: black;
+  /* hover for desctop */
+}
+@media (min-width: 1200px) {
+  .close-page-btn:hover {
+    font-size: 70px;
+  }
+}
+.close-page-btn:active {
+  font-size: 70px;
+}
+
 @media (max-width: 1056px) {
   .close-page-btn {
     position: relative;
     top: 0;
     right: 0;
     grid-column: span 2/-1;
-  }
-}
-@media (max-width: 1056px) {
-  .close-page-btn {
     font-size: 50px;
-  }
-  .close-page-btn:hover {
-    font-size: 40px;
   }
   .close-page-btn:active {
     font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .close-page-btn {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+  }
+  .close-page-btn:active {
+    font-size: 30px;
   }
 }
 

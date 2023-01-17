@@ -23,15 +23,18 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  /* hover for desctop */
 }
 .empty__link p {
   font-size: 18rem;
 }
-.empty__link:hover {
-  color: orange;
-}
-.empty__link:hover svg * {
-  fill: orange;
+@media (min-width: 1200px) {
+  .empty__link:hover {
+    color: orange;
+  }
+  .empty__link:hover svg * {
+    fill: orange;
+  }
 }
 .empty svg {
   height: 30px;

@@ -16,6 +16,7 @@ export const Div = ({ items, divCapture }) => {
               quantity={object.quantity}
               key={object.caption}
               src={object.src}
+              srcmob={object.srcmob}
               caption={object.caption}
               price={object.price}
             />

@@ -1,7 +1,14 @@
 nav {
   display: contents;
 }
-
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
 div {
   user-select: none;
 }
@@ -57,6 +64,7 @@ li {
 h2 {
   font-family: Fjalla One;
   margin-bottom: 20rem;
+  margin-top: 40rem;
   font-size: 35rem;
 }
 
@@ -82,25 +90,6 @@ h2 + p {
   position: absolute;
   left: 0;
 }
-.close-page-btn {
-  user-select: none;
-  cursor: pointer;
-  grid-column: -2 / -1;
-  background-color: transparent;
-  font-size: 80px;
-  font-weight: 200;
-  border: none;
-  line-height: 100px;
-  text-align: right;
-  position: sticky;
-
-  &:hover {
-    font-size: 70px;
-  }
-  &:active {
-    font-size: 70px;
-  }
-}
 
 .btn {
   width: 180px;
@@ -110,24 +99,36 @@ h2 + p {
   border: none;
   font-size: 20rem;
 
-  &:hover,
   &:active {
     background-color: orange;
     color: black;
+  }
+  /* hover for desctop */
+  @media (min-width: 1200px) {
+    &:hover {
+      background-color: orange;
+      color: black;
+    }
   }
   &:disabled {
     background-color: #bebebe;
     cursor: default;
     color: rgb(226, 226, 226);
-    &:hover {
-      color: rgb(226, 226, 226);
+    /* hover for desctop */
+    @media (min-width: 1200px) {
+      &:hover {
+        color: rgb(226, 226, 226);
+      }
     }
   }
 }
 .btn_about_added {
-  &:hover {
-    background-color: black;
-    color: white;
+  /* hover for desctop */
+  @media (min-width: 1200px) {
+    &:hover {
+      background-color: black;
+      color: white;
+    }
   }
 }
 /*-------------- BCG COLOR ---------------------------------*/
@@ -135,7 +136,7 @@ h2 + p {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
+  // width: 100%;
   min-height: 100%;
   flex: 1;
   justify-content: center;
@@ -206,8 +207,11 @@ h2 {
     cursor: pointer;
     padding: 30px;
     margin-right: -30px;
-    &:hover {
-      margin-bottom: 10px;
+    /* hover for desctop */
+    @media (min-width: 1200px) {
+      &:hover {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -221,21 +225,51 @@ h2 {
   }
 }
 
-/*-------------- btn -------------------------*/
+/*-------------- close btn -------------------------*/
+
+.close-page-btn {
+  user-select: none;
+  cursor: pointer;
+  grid-column: -2 / -1;
+  background-color: transparent;
+  font-size: 80px;
+  font-weight: 200;
+  border: none;
+  line-height: 100px;
+  text-align: right;
+  position: sticky;
+  color: black;
+
+  /* hover for desctop */
+  @media (min-width: 1200px) {
+    &:hover {
+      font-size: 70px;
+    }
+  }
+  &:active {
+    font-size: 70px;
+  }
+}
+
 .close-page-btn {
   @media (max-width: 1056px) {
     position: relative;
     top: 0;
     right: 0;
     grid-column: span 2/ -1;
-  }
-  @media (max-width: 1056px) {
     font-size: 50px;
-    &:hover {
-      font-size: 40px;
-    }
+
     &:active {
       font-size: 40px;
+    }
+  }
+  @media (max-width: 500px) {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+
+    &:active {
+      font-size: 30px;
     }
   }
 }

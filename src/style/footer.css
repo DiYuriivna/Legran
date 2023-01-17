@@ -4,6 +4,7 @@
   padding-bottom: 10vh;
   grid-column: 1/-1;
   margin-bottom: 0;
+  /* hover for desctop */
   /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
 }
 .footer__logo {
@@ -18,8 +19,10 @@
   list-style: none;
   margin-bottom: 15px;
 }
-.footer a li:hover {
-  margin-left: 2px;
+@media (min-width: 1200px) {
+  .footer a li:hover {
+    margin-left: 2px;
+  }
 }
 .footer__menu {
   grid-column: 5/span 2;

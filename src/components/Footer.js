@@ -7,7 +7,7 @@ function Footer() {
         <div className="bcg-orange"></div>
         <div className="footer__wrap">
           <div className="footer grid">
-            <Linkto="">
+            <Link to="/">
               <img
                 src="assets/outline_logo.svg"
                 alt="Link to homepage"
@@ -18,10 +18,10 @@ function Footer() {
               <li>
                 <h4>Menu</h4>
               </li>
-              <Link to="pizza">
+              <Link to="/pizza">
                 <li>Food</li>
               </Link>
-              <Link to="beer">
+              <Link to="/beer">
                 <li>Drink</li>
               </Link>
             </ul>
@@ -29,7 +29,7 @@ function Footer() {
               <li>
                 <h4>Login</h4>
               </li>
-              <Linkto="orders">
+              <Link to="/orders">
                 <li>Your orders</li>
               </Link>
               <li>Track order</li>

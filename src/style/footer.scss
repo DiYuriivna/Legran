@@ -17,8 +17,11 @@
     list-style: none;
     margin-bottom: 15px;
   }
-  a li:hover {
-    margin-left: 2px;
+  /* hover for desctop */
+  @media (min-width: 1200px) {
+    a li:hover {
+      margin-left: 2px;
+    }
   }
   &__menu {
     grid-column: 5 / span 2;

@@ -1,8 +1,6 @@
 /*# sourceMappingURL=extends.css.map */
 .coctail-section {
-  margin-top: 10%;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+  padding-bottom: 6vh;
   /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
 }
 .coctail-section h2 {
@@ -18,8 +16,8 @@
 .coctail-section__cards {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 2.5%;
-       column-gap: 2.5%;
+  -moz-column-gap: 4vw;
+       column-gap: 4vw;
 }
 .coctail-section__cards .card {
   color: white;

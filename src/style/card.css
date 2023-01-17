@@ -63,6 +63,10 @@ p {
      object-fit: cover;
 }
 .card__addbtn {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -87,18 +91,21 @@ p {
   font-size: 15px;
   color: white;
 }
-.card__addbtn:hover .card__add-or-check_check {
-  font-size: 10px;
-}
-.card__addbtn:hover .card__add-or-check {
-  font-size: 30px;
-}
 .card__addbtn:active {
   background-color: black;
   color: white;
 }
 
 /*@@@@@@@@@@@@@@@@@@@@@ BREACK POINT VIEW @@@@@@@@@@@@@@@*/
+/* hover for desctop */
+@media (min-width: 1200px) {
+  .card__addbtn:hover .card__add-or-check_check {
+    font-size: 10px;
+  }
+  .card__addbtn:hover .card__add-or-check {
+    font-size: 30px;
+  }
+}
 /*-------------------Newdishes-wrapper---------------------------*/
 @media (min-width: 1600px) {
   .newdishes {
@@ -138,11 +145,12 @@ p {
          columns: unset;
     display: inline-block;
   }
+  .newdishes__1blockwrap, .newdishes__2blockwrap {
+    display: flex;
+    flex-direction: column;
+  }
   .newdishes .card {
     max-width: 100%;
-  }
-  .newdishes__1blockwrap h2 {
-    font-size: 25px;
   }
   .newdishes__1blockwrap .newdishes__para {
     display: none;

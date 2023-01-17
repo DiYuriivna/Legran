@@ -37,8 +37,13 @@ ul {
       color: black;
       text-decoration: none;
       flex: 1;
-      &:hover,
       &active {
+        color: black;
+      }
+    }
+    /* hover for desctop */
+    @media (min-width: 1200px) {
+      a:hover {
         color: black;
       }
     }

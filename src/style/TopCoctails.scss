@@ -1,10 +1,7 @@
 @import "./extends";
 
 .coctail-section {
-  margin-top: 10%;
-
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+  padding-bottom: 6vh;
   h2 {
     text-align: center;
   }
@@ -18,9 +15,8 @@
 
   &__cards {
     display: flex;
-
     justify-content: space-between;
-    column-gap: 2.5%;
+    column-gap: 4vw;
     .card {
       color: white;
     }

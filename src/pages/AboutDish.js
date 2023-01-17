@@ -78,9 +78,9 @@ export const AboutDish = ({
                 </button>
               </div>
             </div>
-            <button onClick={goBack} className="about__close">
+            <div onClick={goBack} className="about__close">
               X
-            </button>
+            </div>
           </div>
         </div>
         {/* </div>{" "} */}

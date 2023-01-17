@@ -81,7 +81,7 @@ function DropDownTime({ isDelivery, setFormData, formData }) {
   }, [date]); /*-----get changed data -----*/
 
   useEffect(() => {
-    console.log(time);
+
     setFormData({ ...formData, ...{ time } });
   }, [time]); /*-----get changed time -----*/
 
@@ -93,15 +93,12 @@ function DropDownTime({ isDelivery, setFormData, formData }) {
       <div className="cart__date-time-wrap">
         {/* ---------------------------------DATE----------------------------- */}
         <div className="relative flex align-items-center ">
-          <input
-            type="text"
+          <div
             className="cart__date-time-input text-align-right "
             onClick={dropDownData}
-            value={date}
-            placeholder="Today"
-            name="Date"
-            onChange={(e) => console.log(e.target.value)}
-          />
+          >
+            {date}
+          </div>
           <div className="absolute-right-0">
             {isDropdownListData && (
               <TimeList
@@ -117,13 +114,12 @@ function DropDownTime({ isDelivery, setFormData, formData }) {
         {/* -------------------------------TIME--------------------------------- */}
 
         <div className="relative flex align-items-center">
-          <input
-            type="text"
+          <div
             className="cart__date-time-input text-align-left"
             onClick={dropDown}
-            value={time}
-            placeholder="12:00"
-          />
+          >
+            {time}
+          </div>
           <div className="absolute-left-0">
             {isDropdownList && (
               <TimeList

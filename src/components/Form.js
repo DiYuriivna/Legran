@@ -1,11 +1,6 @@
-import { useForm } from "react-hook-form";
-
 export const Form = () => {
-  const { handleSubmit } = useForm();
-  const submitFunc = (data) => console.log(data);
-  handleSubmit(submitFunc);
   return (
-    <form className="cart__details" onSubmit={handleSubmit(submitFunc)}>
+    <form className="cart__details">
       {/* ----------------------------------------SWITCH BUTTON------------------------------------------------------- */}
       <div className="cart__details-wrap">
         <h2>Order type</h2>
